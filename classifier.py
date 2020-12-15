@@ -2,4 +2,4 @@
 
 import torchvision.models as models
 for files in os.listdir("./coc/pcba1/Datasets/public/NTU_RGBD/nturgb+d_rgb"):
-    print files 
+    print(files)
