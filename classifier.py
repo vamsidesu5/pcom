@@ -1,5 +1,7 @@
 # Train a per-frame classifier on NTU-RGBD for RGB data (use VGG16, you can get it in pytorch)
 # Dataset Info: http://rose1.ntu.edu.sg/datasets/actionrecognition.asp
+# Parsing Info: https://github.com/FesianXu/NTU_RGBD120_Parser_python
+
 # Imports 
 import torchvision.models as models
 import os
