@@ -1,9 +1,5 @@
-# TODO
-# - Better docs -- use sphinx (or something)
-# - Turn this into an installable python module
-
-
 '''
+TODO: rework parser
 NTU RGB+D Action Recognition Dataset helper
 website: http://rose1.ntu.edu.sg/Datasets/actionRecognition.asp
 github: https://github.com/shahroudy/NTURGB-D
