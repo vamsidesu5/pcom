@@ -28,49 +28,6 @@ from config import *
 compiled_regex = re.compile('.*S(\d{3})C(\d{3})P(\d{3})R(\d{3})A(\d{3}).*')
 
 
-
-##################################################
-# Subject ids used in original paper for training
-TRAIN_IDS = [1, 2, 4, 5, 8, 9, 13, 14, 15, 16, 17, 18, 19, 25, 27, 28, 31, 34, 35, 38]
-TRAIN_VALID_IDS = ([1, 2, 5, 8, 9, 13, 14, 15, 16, 18, 19, 27, 28, 31, 34, 38], [4, 17, 25, 35])
-
-
-
-##################################################
-# Some pre-defined Kinect v2 parameters
-
-#  RGB Intrinsic Parameters
-fx_rgb = 1.0820918205955327e+03
-fy_rgb = 1.0823759977994873e+03
-cx_rgb = 9.6692449993169430e+02
-cy_rgb = 5.3566594698237566e+02
-
-# Depth Intrinsic Parameters
-fx_d = 365.481
-fy_d = 365.481
-cx_d = 257.346
-cy_d = 210.347
-
-# Distortion parameters
-k1 = 0.0905474
-k2 = -0.26819
-k3 = 0.0950862
-p1 = 0.
-p2 = 0.
-
-# Matrix versions
-rgb_mat = np.array([[fx_rgb,     0., cx_rgb],
-                    [    0., fy_rgb, cy_rgb],
-                    [    0.,     0.,     1.]])
-d_mat   = np.array([[fx_d,   0., cx_d],
-                    [  0., fy_d, cy_d],
-                    [  0.,   0.,   1.]])
-dist_array = np.array([k1, k2, k3, p1, p2])
-
-
-
-
-
 class NTU():
     def __init__(self):
         self.num_vids              = len(self.get_files(CACHE_RGB_VID))
@@ -726,5 +683,6 @@ def create_all_3D_op_flows():
         print("Total time: {}".format(dt.datetime.now() - start))
 
 if __name__ == '__main__':
+    video_path = "/coc/pcba1/Datasets/public/NTU_RGBD/nturgb+d_rgb"
     dataset = NTU()
     x = dataset.get_
