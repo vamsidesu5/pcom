@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "rgb_modeling.py", line 17, in <module>
+    x_train = torch.tensor(scipy.sparse.csr_matrix.todense(x_train)).float()
+  File "/usr/local/lib/python3.5/dist-packages/scipy/sparse/base.py", line 846, in todense
+    return np.asmatrix(self.toarray(order=order, out=out))
+AttributeError: 'numpy.ndarray' object has no attribute 'toarray'
